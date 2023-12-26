@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+</head>
+
+<body>
+  <%  if(locals.lettercount_ejs){%>
+  <!-- Write your code here -->
+  <p> your name is <%= name_your %> and it has <%=lettercount_ejs %> number of letter in your words</p>
+  <% } else { %>
+
+  <h2> Enter your age</h2>
+  <% } %>
+  <form action="/submit" method="POST">
+    <input type="text" name="fname" placeholder="First name">
+    <input type="text" name="lname" placeholder="Last name">
+    <input type="submit" value="OK">
+  </form>
+</body>
+
+</html>
