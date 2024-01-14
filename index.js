@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index.ejs")
 });
-
+ 
 app.post("/submit", (req, res) => {
   const nme = req.body["fname"];
   const letterNumber = req.body["fname"].length + req.body["lname"].length;
@@ -21,5 +21,5 @@ app.post("/submit", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at port ${port}`);
+  console.log(`Server running a port ${port}`);
 });
